@@ -1,1 +1,7 @@
 Compiled using Visual C++ Express Edition 2010
+
+Main Program: ScreenSaverProgram.cpp
+
+Stand Alone Classes:
+	Vertex (vertex.h, vertexpriv.h, verteximpl.cpp)
+	Shapes (Basic_Shapes.h, Basic_Shapes.cpp)

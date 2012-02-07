@@ -1,9 +1,6 @@
 /*
- * Student: Geneva Smith (0964909)
- * Course: Software Engineering 3GC3
- * Professor:
- * Interactive Screen Saver (Assignment #1)
- * Due: October 12, 2011
+ * Geneva Smith
+ * October 12, 2011
  * ----------------------------------------
  * This program uses the OpenGL/GLUT library to create an interactive
  * "screen saver" that manipulates a set of points. The individual point
