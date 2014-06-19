@@ -16,8 +16,8 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include <OpenGL/OpenGL.h>
-#include <GLUT/GLUT.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 #include "math.h"
 
 using namespace std;

@@ -1,6 +1,5 @@
 /*
- * Geneva Smith
- * October 12, 2011
+ * Geneva Smith 
  * ----------------------------------------
  * This program uses the OpenGL/GLUT library to create an interactive
  * "screen saver" that manipulates a set of points. The individual point
@@ -17,8 +16,8 @@
 #include <vector>
 #include <ctime>
 
-#include <GLUT/GLUT.h>
-#include <OpenGL/OpenGL.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 
 //Programmer defined libraries and classes
 #include "Basic_Shapes.h"
@@ -85,7 +84,7 @@ void display(void)
 				if (points.size() == 0) drawStart(px1, py1, size, c);
 				else drawPoint(points[lastMarker]);
 			}
-			for (int i = lastMarker + 1; i < points.size(); i++) drawPoint(points.at(i));
+			for (size_t i = lastMarker + 1; i < points.size(); i++) drawPoint(points.at(i));
 			drawStart(px1, py1, size, c);
 		}
 	}
@@ -105,7 +104,7 @@ void display(void)
 				if (lastMarker == 0 && points.size() < 1) drawPoint(points.at(0));
 				else
 				{
-					for (int i = lastMarker + 1; i < points.size(); i++) polySet.push_back(points.at(i));
+					for (size_t i = lastMarker + 1; i < points.size(); i++) polySet.push_back(points.at(i));
 					drawFilledPolygon(polySet);
 					polySet.erase(polySet.begin(), polySet.begin() + polySet.size());
 				}
@@ -116,7 +115,7 @@ void display(void)
 	//Drawing the animated objects
 	if (current == Dot)
 	{
-		for (int i = 0; i < points.size(); i++)
+		for (size_t i = 0; i < points.size(); i++)
 		{
 			drawPoint(points.at(i));
 			if (pauseflag == false) points.at(i).UpdatePosition();
@@ -149,7 +148,7 @@ void display(void)
 			polySet.erase(polySet.begin(), polySet.begin() + polySet.size());
 
 			//Drawing the remaining polygons
-			for (int i = 1; i < polygonMarkers.size(); i++)
+			for (size_t i = 1; i < polygonMarkers.size(); i++)
 			{
 				for (int j = polygonMarkers.at(i - 1) + 1; j < polygonMarkers.at(i); j++) 
 				{
@@ -304,13 +303,13 @@ void kbd(unsigned char key, int x, int y)
 	//If "-" is pressed, decrease the speed of all stored points
 	else if (key == '-')
 	{
-		for (int i = 0; i < points.size(); i++) points.at(i).ChangeSpeed(false);
+		for (size_t i = 0; i < points.size(); i++) points.at(i).ChangeSpeed(false);
 	}
 
 	//If "+" is pressed, increase the speed of all stored points
 	else if (key == '+')
 	{
-		for (int i = 0; i < points.size(); i++) points.at(i).ChangeSpeed(true);
+		for (size_t i = 0; i < points.size(); i++) points.at(i).ChangeSpeed(true);
 	}
 
 	//If "p" or "P" is pressed, pause/play the animation
@@ -369,7 +368,7 @@ void SizeSubMenu (GLint newSize)
 
 	glutPostRedisplay();
 
-	for (int i = 0; i < points.size(); i++) points.at(i).ChangeSize(size);
+	for (size_t i = 0; i < points.size(); i++) points.at(i).ChangeSize(size);
 
 	return;
 }

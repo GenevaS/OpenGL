@@ -17,8 +17,8 @@
 #include <math.h>
 #include <vector>
 
-#include <OpenGL/OpenGL.h>
-#include <GLUT/GLUT.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 
 #include "Basic_Shapes.h"
 #include "vertex.h"
@@ -196,7 +196,7 @@ void drawCircle(double c[2], double r, double colour[3])
 	const double TWO_PI = 6.283185307;
 
 	//Angle between each point
-	long step =  TWO_PI / MAX_POINTS;
+	long double step =  TWO_PI / MAX_POINTS;
 
 	double p1[2];
 	double p2[2];

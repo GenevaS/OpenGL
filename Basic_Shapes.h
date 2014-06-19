@@ -6,8 +6,8 @@
 #include <vector>
 #include <math.h>
 
-#include <OpenGL/OpenGL.h>
-#include <GLUT/GLUT.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 
 #include "vertex.h"
 
