@@ -8,8 +8,8 @@
  */
 
 //Graphic libraries
-#include <GLUT/GLUT.h>
-#include <OpenGL/OpenGL.h>
+#include <GL/glut.h>
+#include <GL/GL.h>
 
 //C++ libraries
 #include <iostream>
@@ -17,7 +17,7 @@
 #include <vector>
 
 //Associated header file
-#include "Height Map Mesh.h"
+#include "HeightMapMesh.h"
 
 using namespace std;
 

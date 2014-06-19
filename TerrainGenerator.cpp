@@ -16,11 +16,11 @@
 #include <math.h>
 
 //OPenGL libraries
-#include <OpenGL/OpenGL.h>
-#include <GLUT/GLUT.h>
+#include <GL/glut.h>
+#include <GL/GL.h>
 
 //Programmer defined libraries and classes
-#include "Height Map Mesh.h"
+#include "HeightMapMesh.h"
 
 using namespace std;	//Allows the use of vectors and I/O
 
